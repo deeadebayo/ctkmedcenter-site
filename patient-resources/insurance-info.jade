@@ -1,0 +1,120 @@
+extends ../templates/layouts/layout.jade
+block script
+    - var pageTitle = "Insurance & Billing Info";
+    meta(name="description" content="How we handle insurance and billing - Christ the King Medical Center is in network with many insurance plans, government health programs, and managed care networks.")
+block content
+    .fluid-container.page-title-outer-box-pr
+        .page-title-box
+            h1.page-title#fittext1
+                span.emphasize-this Insurance
+                |  information
+            h4.page-title-tagline How we handle insurance & billing at CTKMC
+    br
+    br
+    .container
+        h1.as-heading-headline.text-center We accept your health insurance
+        p.text-center.as-para-intro Christ the King Medical Center is in network with many insurance plans, government health programs, and managed care networks. We update our providers frequently, so call us at&nbsp;
+            a(href="tel:7705548015", class="link")
+                strong 770-554-8015
+            |  if you don't see your plan listed.
+        br
+        h3.as-heading-medium Accepted Insurance - Managed Care Networks
+        .row
+            .col-md-6.col-xs-6
+                ul
+                    li
+                        a(href="http://www.aarp.org/", class="link", title="Visit AARP online" target='blank') AARP
+                    li
+                        a(href="https://www.aetna.com/", class="link", title="Visit Aetna online" target='blank') Aetna
+                    li
+                        a(href="http://www.amerigroup.com/", class="link", title="Visit Amerigroup online" target='blank') Amerigroup
+                    li
+                        a(href="https://www.bcbsga.com/health-insurance/home/overview", class="link", title="Visit BCBS of Georgia online" target='blank') Blue Cross and Blue Shield of Georgia
+                    li
+                        a(href="http://www.cigna.com/", class="link", title="Visit Cigna online" target='blank') Cigna
+                    li
+                        a(href="http://coventryhealthcare.com/", class="link", title="Visit Coverntry Health Care online" target='blank') Coventry Health Care
+            .col-md-6.col-xs-6
+                ul
+                    li
+                        a(href="https://www.humana.com/", class="link", title="Visit Humana online" target='blank') Humana
+                    li
+                        a(href="https://www.multiplan.com/", class="link", title="Visit MultiPlan online" target='blank') MultiPlan
+                    li
+                        a(href="http://www.mutualofomaha.com/medicare-supplement-insurance/", class="link", title="Visit Mutual of Omaha online" target='blank') Mutual of Omaha
+                    li
+                        a(href="http://www.tricare.mil/Plans/HealthPlans/Prime.aspx", class="link", title="Visit Tricare Prime online" target='blank') Tricare Prime
+                    li
+                        a(href="http://www.uhc.com/", class="link", title="Visit UnitedHealthcare online" target='blank') UnitedHealthcare
+                    li
+                        a(href="https://www.wellcare.com/", class="link", title="Visit Wellcare online" target='blank') Wellcare
+        h3.as-heading-medium Accepted Insurance - Government Health Programs
+        br
+        ul
+            li
+                a(href="http://www.medicaid.gov/Medicaid-CHIP-Program-Information/By-State/georgia.html", class="link", title="Visit GA Dept. of Health and Human Services online" target='blank') Medicaid
+            li
+                a(href="https://www.medicare.gov/", class="link", title="Visit Medicare online" target='blank') Medicare
+            li
+                a(href="http://www.pshpgeorgia.com/", class="link", title="Visit Peach State Health Plan online" target='blank') Peach State Health Plan
+            li
+                a(href="http://www.tricare.mil/", class="link", title="Visit Tricare online" target='blank') Tricare
+        br
+        br
+        .row
+            h5.small-header For those with health insurance
+            p If your insurance requires pre-certification, pre-authorization, or other approvals, we will speak to them to secure these. You are responsible for paying all charges not covered by insurance. This may include deductibles, co-pay amounts, and non-covered charges. You may be required to pay for any unpaid health care items or services that your insurance plan deems non-covered or not medically necessary.
+            br
+            h5.small-header Filing a claim
+            p We will file a claim for your care with your insurance carrier as long as we have complete billing information and benefits are made payable to Christ the King Medical Center.
+            p Once a claim is filed, we typically will not contact you again until your insurance company has paid and there is a patient balance, or we have been unsuccessful in obtaining payment. Should this occur, we will ask for your assistance with your insurance company for payment.
+            br
+            h5.small-header Don't have insurance? No problem
+            p For those without health insurance, our simple fee structure helps take the guesswork out of healthcare pricing. You can see our doctor when you want to without breaking your budget. Whether you need a physical, a vaccination, or want to address specific health concerns, we make it affordable.
+            //p You pay $175*** for an initial doctor visit and $125*** for each subsequent appointment. For your convenience, we accept checks, debit, and credit cards as payment for your visits.&nbsp;
+                a(data-toggle="modal", data-target=".fee-schedule-modal", class="link") View our complete fee schedule.
+        //div(class="modal fade fee-schedule-modal", tabindex="-1", role="dialog")
+            .modal-dialog.modal-md
+                .modal-content
+                    div(class="container" style={width: "35em"})
+                        h2.as-heading-medium Fee Schedule
+                        .row
+                            .col-md-12
+                                table.table.table-hover
+                                    thead
+                                        tr
+                                            th.name Service
+                                            th.name Price
+                                    tbody
+                                        tr
+                                            td Primary Care — Initial Visit
+                                            td $175
+                                        tr
+                                            td Primary Care — Follow-up Visit
+                                            td $125
+                                        tr
+                                            td Procedures
+                                            td $70-200
+                                        tr
+                                            td Injections
+                                            td $25-150
+                                        tr
+                                            td Specialty Care — Osteopathic Manipulation
+                                            td $100
+                                        tr
+                                            td Specialty Care — Nutrition Consultation
+                                            td $125
+                                        tr
+                                            td Specialty Care — Travel Health Consultation
+                                            td $50
+                                        tr
+                                            td Specialty Care — Naturopathic Medicine
+                                            td $125
+                                        tr
+                                            td Specialty Care — Mental Health
+                                            td $150
+                .modal-footer
+                    button(type="button", class="btn btn-danger", data-dismiss="modal") Close
+    br
+    br
+    br

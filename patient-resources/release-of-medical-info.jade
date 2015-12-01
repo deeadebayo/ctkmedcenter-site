@@ -1,0 +1,27 @@
+extends ../templates/layouts/layout.jade
+block script
+    - var pageTitle = "Release of Medical Information";
+    meta(name="description" content="Getting a physical copy of your medical records at Christ the King Medical Center.")
+block content
+    .fluid-container.page-title-outer-box-pr
+        .page-title-box
+            h1.page-title#fittext1 Release of
+                span.emphasize-this  medical information
+            h4.page-title-tagline Retrieve copies of your medical records
+    br
+    br
+    .container
+        p.as-para-intro Call us at
+            a(href="tel:7705548015", class="link")  (770) 554-8015
+            |  and we’ll help you obtain your medical records.
+        h3.as-heading-medium Getting Medical Records from Christ the King Medical Center
+        p.as-para Medical information is confidential and protected by law. While the information belongs to the patient, Christ the King Medical Center owns the record. The information can only be released with authorization from the patient or their legal guardian. The law requires that the authorization include the patient’s signature and the date the request is being authorized. The law also requires that medical records be kept for 10 years after the patient reaches majority.
+        p.as-para Due to confidentiality regulations, no requests for medical records can be accepted online. Please call our office at
+            a(href="tel:7705548015", class="link")  (770) 554-8015
+            | .
+        h3.as-heading-medium Costs & Charges
+        p.as-para Due to the cost of maintaining, retrieving, and copying records, there is a charge for copies made. If these records are being sent directly to a health care facility for continuity of care, the charge is waived.
+        br
+        br
+        br
+    script $("#fittext1").fitText(1.5, { minFontSize: '44px', maxFontSize: '85px' });
