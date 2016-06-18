@@ -114,6 +114,10 @@ body {
     }
 }
 
+.map-index iframe {
+    pointer-events: none;
+}
+
 /* Wrapper for page content to push down footer */
 
 #wrap {

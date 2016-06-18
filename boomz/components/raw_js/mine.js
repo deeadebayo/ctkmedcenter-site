@@ -145,3 +145,7 @@ $(function () {
     eDisplayMoment.innerHTML = NowMoment.format('[It&#39;s ]dddd[,] MMMM Do[. Today is a great day to be healthy.]');
 });
 
+$('.map-index').click(function () {
+    $('.map-index iframe').css("pointer-events", "auto");
+});
+
