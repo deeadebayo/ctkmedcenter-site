@@ -146,6 +146,13 @@ $(function () {
 });
 
 $('.map-index').click(function () {
+    'use strict';
     $('.map-index iframe').css("pointer-events", "auto");
 });
+
+(function () {
+    'use strict';
+    var today = new Date(), year = today.getFullYear(), thisYear = document.getElementById('this-year');
+    thisYear.innerHTML = year;
+}());
 
