@@ -1,12 +1,14 @@
 import React from 'react';
-import Nav from './Nav';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import TopNavigation from './StyledNavbar';
+import Banner from './Banner';
 
 export default function Layout({ children }) {
 	return (
 		<div>
-			<Nav />
+			<Banner />
+			<TopNavigation />
 			{children}
 			{/* <Footer /> */}
 		</div>
