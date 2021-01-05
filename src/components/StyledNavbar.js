@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
+import { Navbar, NavDropdown, Nav, Dropdown } from 'react-bootstrap';
 
 export default function StyledNavbar(props) {
 	const navigationItems = (navItemText, navItemLink) => {
@@ -29,34 +29,16 @@ export default function StyledNavbar(props) {
 				{ title: 'Telehealth', path: '' },
 				{ title: 'Telehealth', path: '' },
 			],
-		};
-
-	function renderDropdown(dropdown) {
-		const links = Object.entries(dropdown.links);
-		console.log(links);
-
-		return (
-			// <NavDropdown title={name}>
-			links.map((key) => {
+		},
+		navigationDropdownItems = (navItemText, navItemLink) => {
+			return (
 				<NavDropdown.Item>
-					<Link className='nav-link' to='/'>
-						{/* {console.log(Object.keys(links[key]))} */}
-						{console.log(typeof key)}
-						{console.log(key)}
-						{key}
+					<Link className='nav-link' to={`/${navItemLink}`}>
+						{navItemText}
 					</Link>
-				</NavDropdown.Item>;
-			})
-			// </NavDropdown>
-		);
-	}
-	// navigationDropdownItems = (navItemText, navItemLink) => {
-	// 	return (
-	// 		<NavDropdown.Item>
-	// 			<Link className='nav-link' to={`/${navItemLink}`}>
-	// 				{navItemText}
-	// 			</Link>
-	// 		</NavDropdown.Item>
+				</NavDropdown.Item>
+			);
+		};
 
 	return (
 		<header>
@@ -66,10 +48,8 @@ export default function StyledNavbar(props) {
 				<Navbar.Collapse>
 					<Nav className='mr-auto'>
 						{navigationItems('Home', '')}
-						<NavDropdown title={services.name}>
-							{renderDropdown(services.links)}
-						</NavDropdown>
-						{/* <NavDropdown title='Our Services'>
+
+						<NavDropdown title='Our Services'>
 							{navigationDropdownItems('Sick Visits', '')}
 							{navigationDropdownItems('Telehealth', '')}
 							{navigationDropdownItems('Allergy Testing', '')}
@@ -83,8 +63,9 @@ export default function StyledNavbar(props) {
 								'Immigration Physicals',
 								''
 							)}
-						</NavDropdown> */}
-						{/* <NavDropdown title='Patient Resources'>
+						</NavDropdown>
+
+						<NavDropdown title='Patient Resources'>
 							{navigationDropdownItems(
 								'Your First Visit',
 								'first-visit'
@@ -106,15 +87,17 @@ export default function StyledNavbar(props) {
 								'Medical Records Release',
 								'records-release'
 							)}
-						</NavDropdown> */}
-						{/* <NavDropdown title='About'>
+						</NavDropdown>
+
+						<NavDropdown title='About'>
 							{navigationDropdownItems('About Us', 'about-us')}
 							{navigationDropdownItems(
 								'What to Expect',
 								'values'
 							)}
 							{navigationDropdownItems('Our Doctor', 'doctor')}
-						</NavDropdown> */}
+						</NavDropdown>
+
 						{navigationItems('Contact', 'contact')}
 					</Nav>
 				</Navbar.Collapse>
