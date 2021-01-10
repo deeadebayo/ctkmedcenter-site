@@ -1,107 +1,41 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Navbar, NavDropdown, Nav, Dropdown } from 'react-bootstrap';
+import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
+import DropdownMenu from './DropdownMenu';
+import styled from 'styled-components';
+import navigationLinks from '../page-links';
 
-export default function StyledNavbar(props) {
-	const navigationItems = (navItemText, navItemLink) => {
-			return (
-				<Nav.Item>
-					<Link className='nav-link' to={`/${navItemLink}`}>
-						{navItemText}
-					</Link>
-				</Nav.Item>
-			);
-		},
-		services = {
-			name: 'Our Services',
-			dir: 'services',
-			links: [
-				{ title: 'Sick Visits', path: '/' },
-				{ title: 'Telehealth', path: '/' },
-			],
-		},
-		patientResources = {
-			name: 'Patient Resources',
-			dir: 'patient-resources',
-			links: [
-				{ title: 'Your First Visit', path: 'first-visit' },
-				{ title: 'Telehealth', path: '' },
-				{ title: 'Telehealth', path: '' },
-				{ title: 'Telehealth', path: '' },
-			],
-		},
-		navigationDropdownItems = (navItemText, navItemLink) => {
-			return (
-				<NavDropdown.Item>
-					<Link className='nav-link' to={`/${navItemLink}`}>
-						{navItemText}
-					</Link>
-				</NavDropdown.Item>
-			);
-		};
+const StylededNavbar = styled.header``;
+
+export default function StyledNavbar() {
+	const renderNavigationItems = (navItemText, navItemLink) => {
+		return (
+			<Nav.Item>
+				<Link className='nav-link' to={`/${navItemLink}`}>
+					{navItemText}
+				</Link>
+			</Nav.Item>
+		);
+	};
 
 	return (
-		<header>
+		<StylededNavbar>
 			<Navbar variant='light' sticky='top'>
 				<Navbar.Brand href='#home' />
 				<Navbar.Toggle aria-controls='' />
 				<Navbar.Collapse>
 					<Nav className='mr-auto'>
-						{navigationItems('Home', '')}
-
-						<NavDropdown title='Our Services'>
-							{navigationDropdownItems('Sick Visits', '')}
-							{navigationDropdownItems('Telehealth', '')}
-							{navigationDropdownItems('Allergy Testing', '')}
-							{navigationDropdownItems('Health Screenings', '')}
-							{navigationDropdownItems('Wellness Products', '')}
-							{navigationDropdownItems(
-								'Travel Immunizations',
-								''
-							)}
-							{navigationDropdownItems(
-								'Immigration Physicals',
-								''
-							)}
-						</NavDropdown>
-
-						<NavDropdown title='Patient Resources'>
-							{navigationDropdownItems(
-								'Your First Visit',
-								'first-visit'
-							)}
-							{navigationDropdownItems('FAQs', 'questions')}
-							{navigationDropdownItems(
-								'Forms & Paperwork?',
-								'forms'
-							)}
-							{navigationDropdownItems(
-								'Insurance and Payments',
-								'billing'
-							)}
-							{navigationDropdownItems(
-								'Online Health Records',
-								'online-records'
-							)}
-							{navigationDropdownItems(
-								'Medical Records Release',
-								'records-release'
-							)}
-						</NavDropdown>
-
-						<NavDropdown title='About'>
-							{navigationDropdownItems('About Us', 'about-us')}
-							{navigationDropdownItems(
-								'What to Expect',
-								'values'
-							)}
-							{navigationDropdownItems('Our Doctor', 'doctor')}
-						</NavDropdown>
-
-						{navigationItems('Contact', 'contact')}
+						{renderNavigationItems('Home', '')}
+						{Object.keys(navigationLinks).map((key) => (
+							<DropdownMenu
+								key={key}
+								details={navigationLinks[key]}
+							/>
+						))}
+						{renderNavigationItems('Contact', 'contact')}
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-		</header>
+		</StylededNavbar>
 	);
 }
