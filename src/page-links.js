@@ -1,16 +1,16 @@
-const navigationLinks = {
+const dropdownLinks = {
 	services: {
 		id: 1,
 		name: 'Our Services',
 		dir: 'services',
 		links: [
 			{ title: 'Sick Visits', to: '' },
-			{ title: 'Telehealth', to: '/' },
-			{ title: 'Allergy Testing', to: '/' },
-			{ title: 'Health Screenings', to: '/' },
-			{ title: 'Wellness Products', to: '/' },
-			{ title: 'Travel Immunizations', to: '/' },
-			{ title: 'Immigration Physicals', to: '/' },
+			{ title: 'Telehealth', to: '' },
+			{ title: 'Allergy Testing', to: '' },
+			{ title: 'Health Screenings', to: '' },
+			{ title: 'Wellness Products', to: '' },
+			{ title: 'Travel Immunizations', to: '' },
+			{ title: 'Immigration Physicals', to: '' },
 		],
 	},
 	patientResources: {
@@ -18,7 +18,7 @@ const navigationLinks = {
 		name: 'Patient Resources',
 		dir: 'patient-resources',
 		links: [
-			{ title: 'Your First Visit', path: 'first-visit' },
+			{ title: 'Your First Visit', to: 'first-visit' },
 			{ title: 'Forms & Paperwork?', to: 'forms' },
 			{ title: 'Insurance and Payments', to: 'billing' },
 			{ title: 'Online Health Records', to: 'online-records' },
@@ -36,4 +36,4 @@ const navigationLinks = {
 		],
 	},
 };
-export default navigationLinks;
+export default dropdownLinks;

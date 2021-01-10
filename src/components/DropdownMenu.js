@@ -7,7 +7,7 @@ export default (props) => {
 	return (
 		<NavDropdown title={name} key={id}>
 			{links.map((link) => (
-				<NavDropdown.Item as='li'>
+				<NavDropdown.Item as='li' key={`${id}, ${links.indexOf(link)}`}>
 					<Link className='nav-link' to={`/${dir}/${link.to}`}>
 						{link.title}
 					</Link>
