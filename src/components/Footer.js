@@ -75,6 +75,7 @@ const footer = css`
 							</section>
 						</Col>
 					))}
+					<Col>For logo?</Col>
 				</Row>
 				<hr />
 				<Row className='footer__company'>
@@ -85,7 +86,12 @@ const footer = css`
 						</p>
 					</Col>
 					<Col>
-						<p>Call us icon and google business icon</p>
+						<p>
+							<a>
+								<Link to='/contact'>Contact </Link>
+							</a>
+							Call us icon and google business icon
+						</p>
 					</Col>
 				</Row>
 			</Container>
