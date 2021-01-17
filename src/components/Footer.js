@@ -4,7 +4,8 @@ import { css } from '@emotion/react';
 import { Link } from 'gatsby';
 
 const footer = css`
-		display: grid;
+		background-color: #f7f7f7;
+		border-top: 1px solid #dddddd;
 		.footer__links {
 		}
 		.footer__company {
@@ -82,10 +83,10 @@ const footer = css`
 					<Col>
 						<p>
 							© {2021} Christ the King Healthcare. All rights
-							reserved · Privacy · Credits · Sitemap
+							reserved · Privacy · Sitemap · Credits
 						</p>
 					</Col>
-					<Col>
+					<Col md='auto'>
 						<p>
 							<a>
 								<Link to='/contact'>Contact </Link>
