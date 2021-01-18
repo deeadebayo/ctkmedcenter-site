@@ -1,12 +1,26 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-export default function HomePage() {
+import Hero from '../components/Hero';
+import QuickLinks from '../components/QuickLinks';
+import HealthServices from '../components/HealthServices';
+import ClinicInfo from '../components/ClinicInfo';
+import Testimonials from '../components/Testimonials';
+import ContactMap from '../components/ContactMap';
+
+const HomePage = () => {
 	return (
 		<main>
+			<Hero />
 			<Container>
-				<div>This is the home page</div>
+				<QuickLinks />
+				<HealthServices />
+				<ClinicInfo />
+				<Testimonials />
+				<ContactMap />
 			</Container>
 		</main>
 	);
-}
+};
+
+export default HomePage;

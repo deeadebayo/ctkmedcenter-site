@@ -7,9 +7,7 @@ import dropdownLinks from '../page-links';
 
 import styled from 'styled-components';
 
-const StylededNavbar = styled.header`
-	grid-row: 2/3;
-`;
+const StylededNavbar = styled.header``;
 
 export default function StyledNavbar() {
 	const NavigationItem = (props) => {
