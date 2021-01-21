@@ -7,6 +7,7 @@ import HealthServices from '../components/HealthServices';
 import ClinicInfo from '../components/ClinicInfo';
 import Testimonials from '../components/Testimonials';
 import ContactMap from '../components/ContactMap';
+import { Helmet } from 'react-helmet';
 
 const HomePage = () => {
 	return (

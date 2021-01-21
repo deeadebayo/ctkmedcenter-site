@@ -1,5 +1,9 @@
 import { css } from '@emotion/react';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fontsource/alegreya-sans'; //for headers and displays
+import '@fontsource/roboto'; // body text
+
 const globalStyles = css`
 	body {
 		min-height: 100%;
