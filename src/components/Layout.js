@@ -17,13 +17,15 @@ const Wrapper = styled('div')`
 `;
 
 export default function Layout({ children }) {
+	const todayTime = new Date();
+
 	return (
 		<Wrapper>
 			<Global styles={globalStyles} />
 			<Banner />
-			<StyledNavbar />
+			<StyledNavbar date={todayTime} />
 			{children}
-			<Footer />
+			<Footer year={todayTime.getFullYear()} />
 		</Wrapper>
 	);
 }

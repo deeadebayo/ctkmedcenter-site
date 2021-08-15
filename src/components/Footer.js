@@ -56,48 +56,50 @@ const footer = css`
 			],
 		},
 	],
-	Footer = () => (
-		<footer css={footer}>
-			<Container>
-				<Row className='footer__links'>
-					{footerLinksData.map((linkData) => (
+	Footer = ({ year }) => {
+		return (
+			<footer css={footer}>
+				<Container>
+					<Row className='footer__links'>
+						{footerLinksData.map((linkData) => (
+							<Col>
+								<section>
+									<h2>{linkData.headerTitle}</h2>
+									<ul>
+										{linkData.links.map((link) => (
+											<li key={link.id}>
+												<Link to={link.url}>
+													{link.name}
+												</Link>
+											</li>
+										))}
+									</ul>
+								</section>
+							</Col>
+						))}
+						<Col>For logo?</Col>
+					</Row>
+					<hr />
+					<Row className='footer__company'>
 						<Col>
-							<section>
-								<h2>{linkData.headerTitle}</h2>
-								<ul>
-									{linkData.links.map((link) => (
-										<li key={link.id}>
-											<Link to={link.url}>
-												{link.name}
-											</Link>
-										</li>
-									))}
-								</ul>
-							</section>
+							<p>
+								© {year} Christ the King Healthcare. All rights
+								reserved · Privacy · Sitemap · Credits
+							</p>
 						</Col>
-					))}
-					<Col>For logo?</Col>
-				</Row>
-				<hr />
-				<Row className='footer__company'>
-					<Col>
-						<p>
-							© {2021} Christ the King Healthcare. All rights
-							reserved · Privacy · Sitemap · Credits
-						</p>
-					</Col>
-					<Col md='auto'>
-						<p>
-							<a>
-								<Link to='/contact'>Contact </Link>
-							</a>
-							Call us icon and google business icon
-						</p>
-					</Col>
-				</Row>
-			</Container>
-		</footer>
-	);
+						<Col md='auto'>
+							<p>
+								<a>
+									<Link to='/contact'>Contact </Link>
+								</a>
+								Call us icon and google business icon
+							</p>
+						</Col>
+					</Row>
+				</Container>
+			</footer>
+		);
+	};
 
 export default Footer;
 
