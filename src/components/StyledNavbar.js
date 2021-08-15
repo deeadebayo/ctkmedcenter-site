@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 const StylededNavbar = styled.header``;
 
-export default function StyledNavbar() {
+export default function StyledNavbar({ date }) {
 	const NavigationItem = (props) => {
 		return (
 			<Nav.Item>
@@ -19,6 +19,16 @@ export default function StyledNavbar() {
 			</Nav.Item>
 		);
 	};
+	const days = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	];
+	console.log(days[date.getDay()], date.getDate());
 
 	return (
 		<StylededNavbar>
