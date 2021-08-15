@@ -1,4 +1,18 @@
 module.exports = {
+	siteMetadata: {
+		siteUrl: 'https://www.ctkmedcenter.com/',
+		defaultTitle:
+			'Internal Medicine Physician - Christ the King Medical Center',
+		defaultDescription:
+			"From regular physicals to preventative care, our internal medicine clinic manages all aspects of adult patients' health care. Discover primary care with a difference!",
+		defaultBanner: './src/assets/banner.jpg',
+		headline: 'headline',
+		siteLanguage: 'en',
+		// ogLanguage,
+		author: 'superplur.com',
+		// twitter,
+		// facebook,
+	},
 	plugins: [
 		`gatsby-plugin-emotion`,
 		`gatsby-plugin-react-helmet`,
@@ -20,6 +34,12 @@ module.exports = {
 				// dataLayerName: 'YOUR_DATA_LAYER_NAME',
 
 				// routeChangeEventName: 'YOUR_ROUTE_CHANGE_EVENT_NAME',
+			},
+		},
+		{
+			resolve: `gatsby-plugin-typography`,
+			options: {
+				pathToConfigModule: `src/utils/typography`,
 			},
 		},
 	],

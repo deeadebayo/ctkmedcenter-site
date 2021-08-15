@@ -2,15 +2,12 @@ import { css } from '@emotion/react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fontsource/alegreya-sans'; //for headers and displays
-import '@fontsource/roboto'; // body text
+import '@fontsource/alegreya'; //for headers and displays
 
 const globalStyles = css`
 	body {
 		min-height: 100%;
-	}
-	html {
 		height: 100%;
-		font-family: 'Roboto';
 		h1,
 		h2,
 		h3,
@@ -18,6 +15,10 @@ const globalStyles = css`
 		h5,
 		h6 {
 			font-family: 'Alegreya Sans';
+		}
+		p {
+			font-family: 'Alegreya Sans';
+			max-width: 75ch;
 		}
 	}
 	main {

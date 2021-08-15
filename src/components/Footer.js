@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 const footer = css`
 		background-color: #f7f7f7;
 		border-top: 1px solid #dddddd;
+		border-top: 6px solid #ff724a;
 		.footer__links {
 		}
 		.footer__company {
@@ -82,8 +83,9 @@ const footer = css`
 				<Row className='footer__company'>
 					<Col>
 						<p>
-							© {2021} Christ the King Healthcare. All rights
-							reserved · Privacy · Sitemap · Credits
+							© 2015 - {new Date().getFullYear()} Christ the King
+							Healthcare. All rights reserved · Privacy · Sitemap
+							· Credits
 						</p>
 					</Col>
 					<Col md='auto'>
@@ -100,20 +102,3 @@ const footer = css`
 	);
 
 export default Footer;
-
-// 	.page-footer {
-// 		height: 215px;
-// 	/*    height: auto;*/
-// 		background: #56636a;
-// 		border-top: 6px solid #FF724A;
-// 	}
-
-// 	@media (max-width: 767px) {
-// 		.page-footer {
-// 			height: 320px;
-// 		}
-// 	}
-
-// 	.page-footer p {
-// 		color: #fff;
-// 	}
