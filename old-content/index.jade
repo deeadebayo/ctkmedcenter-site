@@ -1,0 +1,253 @@
+extends ./templates/layouts/layout.jade
+block script
+    - var pageTitle = "Internal Medicine Clinic";
+    meta(name='description' content="From regular physicals to preventative care, our internal medicine clinic manages all aspects of adult patients' health care. Discover primary care with a difference!")
+    meta(name="keywords" content="medical weight loss, diabetes, internal medicine, doctor, physician, medical, check-up")
+block content
+    div(class="carousel fade-carousel slide animated bounceInDown", data-ride="carousel", data-interval="9000", id="bs-carousel")
+        // Indicators
+        ol.carousel-indicators
+            li(data-target="#bs-carousel", data-slide-to="0", class="active")
+            li(data-target="#bs-carousel", data-slide-to="1")
+            li(data-target="#bs-carousel", data-slide-to="2")
+            li(data-target="#bs-carousel", data-slide-to="3")
+        // Wrapper for slides
+        .carousel-inner
+            .item.slides.active
+                .slide-1
+                    .container
+                        .row
+                            .col-md-10.col-sm-12.col-xs-12.hero-background.hero
+                                h1.tagline Together, our Promise is your health
+                                p.supporting-text Thank you for visiting our website. Click <strong><a href="/about-us" class="link">here to learn about our clinic</a></strong> or click the "Get Started" below to browse our site.
+                                br
+                                a(href='/#what-can-we-do-anchor')
+                                    button(class="btn btn-hero btn-lg btn-responsive btn-loc", role="button") Get Started&nbsp;
+                                        i.fa.fa-caret-right
+            .item.slides
+                .slide-2
+                    .container
+                        .row
+                            .col-md-8.col-sm-12.col-xs-12.hero-background.hero
+                                h1.tagline Patient Portal
+                                p.supporting-text Get the latest updates to your health records from your doctor — from lab results to prescriptions.
+                                br
+                                a(href='patient-resources/online-medical-records')
+                                    button(class="btn btn-hero btn-lg btn-responsive btn-loc", role="button") How it Works&nbsp;
+                                        i.fa.fa-caret-right
+            .item.slides
+                .slide-3
+                    .container
+                        .row
+                            .col-md-8.col-sm-12.col-xs-12.hero-background.hero
+                                h1.tagline Request an appointment
+                                p.supporting-text See our open slots and request a time that's convenient for you.
+                                br
+                                a(href='appointment')
+                                    button(class="btn btn-hero btn-lg btn-responsive btn-loc", role="button") Schedule Online&nbsp;
+                                        i.fa.fa-caret-right
+            .item.slides
+                .slide-4
+                    .container
+                        .row
+                            .col-md-8.col-sm-12.col-xs-12.hero-background.hero
+                                h1.tagline Traveling Soon?
+                                p.supporting-text Vaccinations help keep you healthy at home and abroad. Click below to out more about travel vaccines.
+                                br
+                                a(href='health-info/travel-medicine')
+                                    button(class="btn btn-hero btn-lg btn-responsive btn-loc", role="button") Learn More&nbsp;
+                                        i.fa.fa-caret-right
+        a(class="left carousel-control", href="#bs-carousel", data-slide="prev")
+            span.glyphicon.glyphicon-chevron-left
+        a(class="right carousel-control", href="#bs-carousel" data-slide="next")
+            span.glyphicon.glyphicon-chevron-right
+    section#activities
+        .container
+            .row.animated.fadeIn.delay
+                a(href="patient-resources/online-medical-records", title="Access your online medical records")
+                    .one-fourth-activity.nounderline.hidden-xs.background-highlight
+                        i.fa.fa-user-md.fa-5x.activity-btn
+                        h3.nounderline-text.link.as-heading-headline-smallest Online Health Records
+                a(href="contact-us.php#info", title="View location and directions")
+                    .one-fourth-activity.nounderline.background-highlight
+                        i.fa.fa-location-arrow.fa-5x
+                        h3.nounderline-text.as-heading-headline-smallest Get Directions
+                a(href="appointment", title="Request an appointment online")
+                    .one-fourth-activity.nounderline.background-highlight
+                        i.fa.fa-calendar.fa-5x
+                        h3.nounderline-text.link.as-heading-headline-smallest Request Appointment
+                a(href="patient-resources/insurance-info", title="View billing and insurance policies")
+                    .one-fourth-activity.nounderline.background-highlight
+                        i.fa.fa-credit-card.fa-5x
+                        h3.nounderline-text.link.as-heading-headline-smallest Billing & Insurance
+    .anchor#what-can-we-do-anchor
+    // To offset the naviagation bar
+    section#what-can-we-do.what-can-we-do.hidden-xs
+        .full-container
+            h2.text-center.as-heading-homepage Explore More
+            br
+            .row
+                div(class='col-md-4 animated wow zoomIn', style={margin: "0 0 1.5em 0"})
+                    a(href="health-info/allergy-testing", title="Schedule an appointment today", class="link")
+                        .overlay.overlay-hover-box
+                            .allergies-homepage
+                            .homepage-card
+                                h2.as-heading-medium-homepage.text-center Allergies slowing you down?
+                                div
+                                    p.homepage-card-text.text-center Feeling stuffed up? Watery eyes? Difficulty breathing? Schedule an appointment to discuss how treatment can alleviate your allergies.
+                div(class='col-md-4 animated wow zoomIn delay-2', style={margin: "0 0 1.5em 0"})
+                    a(href="health-info/travel-medicine", title="Learn more about travel vaccinations", class="link")
+                        .overlay.overlay-hover-box
+                            .vaccinations-homepage
+                            .homepage-card
+                                h2.as-heading-medium-homepage.text-center Have you gotten your shots?
+                                div
+                                    p.homepage-card-text.text-center Vaccinations are the best protection against serious diseases. Before leaving for trips abroad, make sure you and your family are protected.
+                div(class='col-md-4 animated wow zoomIn delay-4', style={margin: "0 0 1.5em 0"})
+                    a(href="health-info/health-screening", title="Learn about recommended health screenings", class="link")
+                        .overlay.overlay-hover-box
+                            .screenings-homepage
+                            .homepage-card
+                                h2.as-heading-medium-homepage.text-center Had a health screening yet?
+                                div
+                                    p.homepage-card-text.text-center Your well-being depends on how you treat your body. Exercise and periodic health screenings are important to maintaining your health.
+    section#feature-boxes.container-fluid.wow.animated.fadeIn
+        .row
+            a(href="appointment", class="link", title="Schedule an appointment online today")
+                .col-md-6.col-lg-6.left-side-feature
+                    .feature-box
+                        br.lineheightyo
+                        h2.as-heading-headline-smaller.text-center Schedule an Appointment Online
+                        p.as-para.text-center You can directly schedule an appointment around your busy schedule.
+                        img(class="schedule-image img-responsive", src="/content/hosted_images/devices-schedule.png", alt="schedule appointment online devices")
+                        br
+                        p.as-para-intro.text-center
+                            a(href="appointment" class="link") Request an appointment online&nbsp;
+                                i.fa.fa-angle-double-right
+                        br.lineheightyo
+            .col-md-6.col-lg-6
+                .row
+                    a(href="health-info/strawberry-laser", class="link")
+                        .col-md-12.col-lg-6.col-sm-12.feature-box-small.feature-box-laser.right-side-feature
+                    .col-lg-6.hidden-xs.hidden-sm.hidden-md.feature-box-small.feature-box-patient-resources.text-center.right-side-feature
+                        .row
+                            div
+                                a(href='/patient-resources/new-patients', class="link", style={display:'inline-block'})
+                                    img(src="/content/hosted_images/newpatient-image.png", alt="new patients", title="New patients: your first visit", class="img-responsive feature-box-image hvr-grow")
+                                    p(class="as-para-intro", style={color:'white'}) Your First Visit
+                                a(href="/patient-resources/faqs", class="link", style={display:'inline-block'})
+                                    img(src="/content/hosted_images/question.png", alt="frequently asked questions", title="View frequently asked questions", class="img-responsive feature-box-image hvr-grow")
+                                    p(class="as-para-intro", style={color:"white"}) Read FAQs
+                            div
+                                a(href="/patient-resources/forms-and-records", class="link", style={display:'inline-block'})
+                                    img(src="/content/hosted_images/forms-image.png" alt="patient forms" title="View patient forms" class="img-responsive feature-box-image hvr-grow")
+                                    p(class="as-para-intro", style={color:'white'}) Patient Forms
+                    //.col-sm-6.feature-box-small.feature-box-contact.text-center.hidden-xs.hidden-lg.hidden-md.right-side-feature
+                        a(href='tel:7705548015')
+                            i.fa.fa-phone-square.feature-icon
+                        p(class="as-para-intro", style={color:'white', paddingTop: '1.5em'}) View our office hours, get directions, and see how you can contact us.
+                        br
+                        p.as-para-intro.text-center
+                            a(href="/contact-us.php", class="link") Visit Contact Us page&nbsp;
+                                i.fa.fa-angle-double-right
+                .row
+                    //.feature-box-small.feature-box-contact.text-center.hidden-xs.hidden-sm.hidden-md.hidden-lg.right-side-feature
+                        a(href="tel:7705548015")
+                            i.fa.fa-phone-square.feature-icon
+                        p.as-para-intro.text-center
+                            a(href="/contact-us.php" class="link") Visit Contact Us page&nbsp;
+                                i.fa.fa-angle-double-right
+                    a(href="/health-info/lifevantage", class="link")
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12.feature-box-small.feature-box-protandim.right-side-feature.text-center
+                            .row
+                                h4.protandim-header Products that promote healthy living
+                            .row.pro-row-loc.text-center
+                                a(href="/health-info/lifevantage", class="link")
+                                    button(class="btn btn-hero btn-lg btn-responsive btn-loc-pro", role="button") Find out more&nbsp;
+                                        i.fa.fa-caret-right
+    section#testies.testies
+        .container.hidden-xs#testimonials-row
+            .row
+                .col-md-12
+                    h2.text-center.as-heading-homepage What People Are Saying
+                    br
+            .row
+                .card.hvr-grow
+                    #onetest
+                        p.card-quote "I felt very comfortable. Being a female, I preferred a lady doctor. Communication and concerns for any and all health problems were brought to attention; the proper tests were done to address these issues. I am very happy with my Doctor."
+                        p.byline.text-center
+                            i.fa.fa-envelope-o
+                            |  Carolyn
+                    #twotest.hidden
+                        p.card-quote "Dr. George-Adebayo is VERY knowledgeable, professional and thorough. Her staff is as amazing as she is."
+                        p.byline.text-center
+                            i.fa.fa-envelope-o
+                            |  Trudy
+                .card.hvr-grow
+                    #threetest
+                        p.card-quote "Very personable and takes her time with each patient. May have a long wait, but when you get in she takes as much time as needed. Extremely thorough. Good Christian atmosphere."
+                        p.byline.text-center
+                            i.fa.fa-envelope-o
+                            |  Lisa
+                    #fourtest.hidden
+                        p.card-quote "The office staff demonstrates a professional office practice, one on one interest in dealing with me, and, from what I witnessed, it was the same for each patient."
+                        p.byline.text-center
+                            i.fa.fa-envelope-o
+                            |  Verified Patient
+                .card.hvr-grow.hidden-sm
+                    #fivetest
+                        p.card-quote "I love Dr. "A" and her entire office crew. Debra is awesome!!! I feel like part of her family in her Christian care and love, as well as her staff. Awesome!!! In every way!!!"
+                        p.byline.text-center
+                            i.fa.fa-envelope-o
+                            |  Verified Patient
+                    #sixtest.hidden
+                        p.card-quote "Dr. Adebayo is a good listener and very thorough with questions about my health and updates to my blood work. I feel very comfortable talking to her and I’m totally honest about how I feel mentally, physically, and spiritually."
+                        p.byline.text-center
+                            i.fa.fa-envelope-o
+                            |  Verified Patient
+        .container
+            .row
+                p.text-center: img(src="/content/hosted_images/promise.png", class="promise img-responsive" alt="ctkmc promise")
+            p.text-center
+                a(href="appointment")
+                    button(class='btn btn-lg btn-responsive btn-schedule' role="button") Schedule online today&nbsp;
+                        i(class='fa fa-chevron-circle-right' style={color: "white"})
+            p.text-center Or call us at <strong><a href="tel:7705548015" class="link">770-554-8015</a></strong>
+    section.fluid-container.right-above-map
+        div(class="row", style={margin: "0"})
+            .container
+                .row
+                    div(class="col-md-3 col-md-offset-3 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1", style={color: "#fff"})
+                        h5(class="small-header", style={color: "#fff"}) Find Us
+                        address.
+                            <strong itemprop="name">Christ the King Medical Center</strong><br>
+                            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                    <span itemprop="streetAddress">3531-3533 Highway 81 South</span><br>
+                                    <span itemprop="addressLocality">Loganville</span>, <span itemprop="addressRegion">Georgia</span> <span itemprop="postalCode">30052</span></span><br>
+                    .col-md-3.col-md-offset-1.col-sm-5.col-sm-offset-1.col-xs-10.col-xs-offset-1
+                        h5(class="small-header", style={color: "#fff"}) Contact
+                        a(href="tel:7705548015", class="link")
+                            strong(itemprop="telephone")
+                                abbr(title="Call")
+                                    i.fa.fa-phone
+                                | &nbsp; 770 554 8015
+                        br
+                        span.nounderline
+                            strong
+                                abbr(title="Fax")
+                                    i.fa.fa-print.nounderline
+                                | &nbsp; 770 554 8042
+                        br
+                        a(href="mailto:info@ctkmedcenter.com?subject=General%20Inquiry", class="link")
+                            strong(itemprop="email")
+                                abbr(title="Email")
+                                    i.fa.fa-envelope
+                                | &nbsp; info@ctkmedcenter.com
+    section.fluid-container.map-index
+        iframe(width="100%", height="395px", frameborder="0", style={display:"block", padding:"0 0 4px 0"}, src="https://www.google.com/maps/embed/v1/place?q=Christ%20the%20King%20Medical%20Center%2C%20Georgia%2081%2C%20Loganville%2C%20GA%2C%20United%20States&key=AIzaSyAHozWXjBDEzTHymjkmfRCJNX18U3wh9Ao")
+    script(src='/boomz/js/wow.js')
+    script new WOW().init();
+    span(itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification")
+        span(itemprop="dayOfWeek" itemscope itemtype="http://schema.org/DayOfWeek")
+            meta(itemprop="name" content="Mo-Fr")
+    meta(itemprop="url" content="http://www.ctkmedcenter.com/")

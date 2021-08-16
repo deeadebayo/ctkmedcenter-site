@@ -1,0 +1,33 @@
+extends ./templates/layouts/layout.jade
+block script
+    - var pageTitle = "Schedule your Appointment";
+    meta(name="description" content="Schedule an appointment quickly and easily at Christ the King Medical Center. All without leaving your computer.")
+block content
+    .fluid-container.page-title-outer-box-con
+        .page-title-box
+            h1.page-title#fittext1 Schedule your
+                span.emphasize-this  apointment
+            h4.page-title-tagline Request an appointment online
+    .container-fluid(style={background:'#F7F7F7'})
+        br
+        br
+        .container
+            h3.as-heading-medium What time works for you?
+            .as-para-intro In the schedule below, choose your desired appointment time (e.g. '10:30 a.m.') and click the arrow to the right. On the next screens, you'll be asked to enter your name, date of birth, and contact information.
+            br
+            h3.as-heading-medium What's next?
+            .as-para-intro When your appointment is confirmed, you will receive an email with the appointment details. If for any chance our office has to reschedule your appointment, you will receive an email with some proposed times. Alternatively, if you need a different time you can contact our office directly.
+            br
+            .as-para-intro A day before your appointment, our office will call you to confirm your visit on the next day.
+            br
+            br
+            div.
+                <iframe title='Book online appointments with Constance George-Adebayo | Patient Fusion' height='400px' width='100%' frameborder='0' src='https://www.patientfusion.com/external/appointment/a043d59d-0cc9-4e0d-a341-39d87c14ea93?origin=doctor'></iframe>
+        br
+        br
+        .container
+            .as-para *For same-day appointment, it may be quicker to call the office at <strong><a href="tel:7705548015" class="link">770-554-8015</a></strong>, instead.
+            .as-para *If for any reason, you are having difficulty using this scheduler, feel free to reach us at <strong><a href="tel:7705548015" class="link">770-554-8015</a></strong> to schedule your appointment.
+            .as-para *As a courtesy, if for any reason you need to cancel or reschedule an appointment, call our office.
+        br
+        br
