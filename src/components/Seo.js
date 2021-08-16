@@ -2,8 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-// import Facebook from './Facebook'
-// import Twitter from './Twitter'
 
 // Complete tutorial: https://www.gatsbyjs.org/docs/add-seo-component/
 
@@ -19,17 +17,14 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
 			defaultBanner,
 			headline,
 			siteLanguage,
-			// ogLanguage,
 			author,
-			// twitter,
-			// facebook,
 		},
 	} = site;
 
 	const seo = {
 		title: title || defaultTitle,
 		description: desc || defaultDescription,
-		image: `${siteUrl}${banner || defaultBanner}`,
+		// image: `${siteUrl}${banner || defaultBanner}`,
 		url: `${siteUrl}${pathname || ''}`,
 	};
 
@@ -207,12 +202,9 @@ const query = graphql`
 				siteUrl
 				defaultTitle: title
 				defaultDescription: description
-				defaultBanner: banner
 				headline
 				siteLanguage
-				ogLanguage
 				author
-				twitter
 				facebook
 			}
 		}

@@ -1,8 +1,6 @@
 import { css } from '@emotion/react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fontsource/alegreya-sans'; //for headers and displays
-import '@fontsource/alegreya'; //for headers and displays
 
 const globalStyles = css`
 	body {

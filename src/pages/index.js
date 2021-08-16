@@ -8,7 +8,7 @@ import ClinicInfo from '../components/ClinicInfo';
 import Testimonials from '../components/Testimonials';
 import ContactMap from '../components/ContactMap';
 import { Helmet } from 'react-helmet';
-import SEO from '../components/seo';
+// import SEO from '../components/seo';
 
 const HomePage = () => {
 	return (
@@ -16,7 +16,7 @@ const HomePage = () => {
 			<Helmet>
 				<title>Trying this out</title>
 			</Helmet>
-			<SEO article />
+			{/* <SEO /> */}
 			<Hero />
 			<Container>
 				<QuickLinks />

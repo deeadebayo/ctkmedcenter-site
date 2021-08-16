@@ -1,35 +1,31 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+// import { css } from '@emotion/react';
 
 import DropdownMenu from './DropdownMenu';
 import dropdownLinks from '../page-links';
 
 import styled from 'styled-components';
+import { getFormattedHealthyDate } from '../utils/formattedDate';
 
 const StylededNavbar = styled.header``;
+// when I add css styles for this, switch to object syntax
+// const navbarStyle = css``
 
-export default function StyledNavbar({ date }) {
-	const NavigationItem = (props) => {
+export default function StyledNavbar() {
+	const NavigationItem = ({name, path}) => {
 		return (
 			<Nav.Item>
-				<Link className='nav-link' to={`/${props.path}`}>
-					{props.name}
+				<Link className='nav-link' to={`/${path}`}>
+					{name}
 				</Link>
 			</Nav.Item>
 		);
 	};
-	const days = [
-		'Sunday',
-		'Monday',
-		'Tuesday',
-		'Wednesday',
-		'Thursday',
-		'Friday',
-		'Saturday',
-	];
-	console.log(days[date.getDay()], date.getDate());
-
+	
+	
+	
 	return (
 		<StylededNavbar>
 			<Navbar variant='light' sticky='top'>

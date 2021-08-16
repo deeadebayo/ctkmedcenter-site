@@ -7,7 +7,19 @@ const days = [
 	'Friday',
 	'Saturday',
 ];
-console.log(days[date.getDay()], date.getDate());
 
+const getOrdinalSuffix = (n) =>
+	n > 3 && n < 21
+		? 'th'
+		: n % 10 == 2
+		? 'nd'
+		: n % 10 == 2
+		? 'nd'
+		: n % 10 == 3
+		? 'rd'
+		: 'th';
 
-export const getFormattedDayDate = (date) => `It's ${days[date.getDay()]} the ${date.getDate()}`
+export const getFormattedHealthyDate = (date) =>
+	`${days[date.getDay()]} the ${date.getDate() + getOrdinalSuffix(date)}`;
+
+export const getCurrentYear = (date) => date.getFullYear();

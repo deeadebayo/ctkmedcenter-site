@@ -1,10 +1,8 @@
 import React from 'react';
 import { Global } from '@emotion/react';
-import styled from '@emotion/styled';
+import styled, { css } from '@emotion/styled';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fontsource/alegreya-sans'; //for headers and displays
-import '@fontsource/roboto'; // body text
 
 import globalStyles from '../styles/globalStyles';
 import Banner from './Banner';
@@ -22,10 +20,10 @@ export default function Layout({ children }) {
 	return (
 		<Wrapper>
 			<Global styles={globalStyles} />
-			<Banner />
-			<StyledNavbar date={todayTime} />
+			<Banner date={todayTime} />
+			<StyledNavbar />
 			{children}
-			<Footer year={todayTime.getFullYear()} />
+			<Footer year={todayTime} />
 		</Wrapper>
 	);
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { css } from '@emotion/react';
 import { Link } from 'gatsby';
+import { getCurrentYear } from '../utils/formattedDate';
 
 const footer = css`
 		background-color: #f7f7f7;
@@ -83,15 +84,15 @@ const footer = css`
 					<Row className='footer__company'>
 						<Col>
 							<p>
-								© {year} Christ the King Healthcare. All rights
+								© {getCurrentYear(year)} Christ the King Healthcare. All rights
 								reserved · Privacy · Sitemap · Credits
 							</p>
 						</Col>
 						<Col md='auto'>
 							<p>
-								<a>
+								
 									<Link to='/contact'>Contact </Link>
-								</a>
+								
 								Call us icon and google business icon
 							</p>
 						</Col>

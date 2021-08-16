@@ -2,16 +2,15 @@ module.exports = {
 	siteMetadata: {
 		siteUrl: 'https://www.ctkmedcenter.com/',
 		defaultTitle:
-			'Internal Medicine Physician - Christ the King Medical Center',
+			'Primary Care for Adults - Christ the King Medical Center',
+			headline: 'Together, our Promise is your health',
 		defaultDescription:
 			"From regular physicals to preventative care, our internal medicine clinic manages all aspects of adult patients' health care. Discover primary care with a difference!",
 		defaultBanner: './src/assets/banner.jpg',
 		headline: 'headline',
 		siteLanguage: 'en',
-		// ogLanguage,
-		author: 'superplur.com',
-		// twitter,
-		// facebook,
+		author: '@superplur - superplur.com',
+		facebook: 'https://www.facebook.com/pages/category/Family-Medicine-Practice/Christ-The-King-Medical-Center-1097848486978801/',
 	},
 	plugins: [
 		`gatsby-plugin-emotion`,
