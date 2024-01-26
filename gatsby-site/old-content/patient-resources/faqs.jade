@@ -1,0 +1,105 @@
+extends ../templates/layouts/layout.jade
+block script
+    - var pageTitle = "Frequently Asked Questions";
+    meta(name="description" content="Some questions we get asked from time to time. Call our office at (770) 554-8015 if you have more specific questions.")
+block content
+    .fluid-container.page-title-outer-box-con
+        .page-title-box
+            h1.page-title#fittext1 Frequently asked
+                span.emphasize-this  questions
+            h4.page-title-tagline Answers to commonly asked questions
+    br
+    br
+    .container
+        section#intro
+            p.as-para-intro Here are some questions we get asked from time to time. As always, feel free to call us  at
+                a(href="tel:7705548015", class="link")  (770) 554-8015
+                |  if you have more specific questions.
+        br
+        ul
+            li
+                a(class="link-underline", href="#referral") Do I need a referral for a visit at CTKMC?
+            li
+                a(class="link-underline", href="#appointment") How do I make an appointment?
+            li
+                a(class="link-underline", href="#location") Where is CTKMC located?
+            li
+                a(class="link-underline", href="#hours") What are your hours of operation?
+            li
+                a(class="link-underline", href="#first-visit") What should I expect at my first visit?
+            li
+                a(class="link-underline", href="#insurance") Do you accept my insurance?
+            li
+                a(class="link-underline", href="#cancellation") What is your cancellation policy?
+            li
+                a(class="link-underline", href="#primary-care") What is Primary Care Physician and why do I need one?
+            li
+                a(class="link-underline", href="#internal-medicine") What is an Internal Medicine doctor?
+            li
+                a(class="link-underline", href="#years") How long has CTKMC been around?
+            li
+                a(class="link-underline", href="#medical-records") How can I get access to my medical records?
+        br
+        .anchor#referral
+        h6.smallest-header-blue Do I need a referral for a visit at CTKMC?
+        p.as-para No, unless you have one of the few insurance plans that require one. You may simply call our office and make an appointment. Our staff can tell you if your insurance plan requires a referral.
+        hr
+        .anchor#appointment
+        h6.smallest-header-blue How do I make an appointment?
+        p.as-para If you are new to Christ the King Medical Center, please call&nbsp;
+            a(href="tel:7705548015", class="link") (770) 554-8015
+            |  to schedule your first appointment. New and existing patients can also book an appointment online using&nbsp;
+            a(href="/appointment", class="link") this link
+            | .
+        hr
+        .anchor#location
+        h6.smallest-header-blue Where is CTKMC located?
+        p.as-para Our address is:<br><br> 3531 Highway 81 South <br> Loganville, GA 30052
+        p.as-para You can find directions as well as information about where we are located on our&nbsp;
+            a(href="/contact-us.php", class="link") Contact Us
+            |  page.
+        hr
+        .anchor#hours
+        h6.smallest-header-blue What are your hours of operation?
+        p.as-para <strong>Hours</strong><br> Monday thru Friday — 9:30 AM to 6:00 PM<br>Saturday & Sunday — Closed
+        hr
+        .anchor#first-visit
+        h6.smallest-header-blue What should I expect at my first visit?
+        p.as-para On your first visit you will meet your physician, recount your medical history and other information and have a physical exam. Please bring a list of any medications you are taking, including over-the-counter and herbal preparations. A family member or caregiver is always welcome to come with you. Remember, however, that your physician may ask very personal questions. It is important that you answer these questions honestly and fully as the answers may have important implications for your care. Please arrive well ahead of time so that you can register, complete paperwork and have an opportunity to relax before your appointment. Refer to our&nbsp;
+            a(href="new-patients", class="link") New Patients (Your First Visit)
+            |  page and our&nbsp;
+            a(href="/about/what-to-expect", class="link") What to Expect
+            |  page for more info.
+        hr
+        .anchor#insurance
+        h6.smallest-header-blue Do you accept my insurance?
+        p.as-para We accept nearly all major health insurance and managed-care plans. Please familiarize yourself with your insurance plan, especially regarding co-pays, referrals and emergency care. Be sure to bring your health insurance card with you to every appointment. If you are unsure if we accept your insurance, please call to confirm. Refer to our&nbsp;
+            a(href="insurance-info", class="link") Insurance Information
+            |  page for more info.
+        hr
+        .anchor#cancellation
+        h6.smallest-header-blue What is your cancellation policy?
+        p.as-para As a courtesy to us, if you need to cancel or reschedule, please do so at least 24 hours in advance to avoid a $50 cancellation fee.
+        hr
+        .anchor#primary-care
+        h6.smallest-header-blue What is a Primary Care Physician and why do I need one?
+        p.as-para Your primary care physician (PCP) is your partner for health and your partner through the health care system. He or she will educate, advise and guide you with all of your health care needs. Your PCP can be a doctor of Internal Medicine or a nurse practitioner who focuses on primary care. Having a PCP is important because he or she can determine when you need to see a specialist, help you find the right specialist, and coordinate all of your care. Many health care insurers require a referral from your PCP before you can see a specialist.
+        hr
+        .anchor#internal-medicine
+        h6.smallest-header-blue What is an Internal Medicine doctor?
+        p.as-para Doctors of Internal Medicine focus on general adult medicine. They care for patients from the teen years through old age. Internists have special training that focuses on the prevention and treatment of adult diseases.
+        hr
+        .anchor#years
+        h6.smallest-header-blue How long has CTKMC been around?
+        p.as-para We've been serving Walton County at our current location for the past 5+ years.
+        hr
+        .anchor#medical-records
+        h6.smallest-header-blue How can I get access to my medical records?
+            p.as-para You will need to contact us at&nbsp;
+                a(href="tel:7705548015", class="link") 770.554.8015
+                |  to get a physical copy of your records. Because of confidentiality regulations, these requests cannot be made online. View&nbsp;
+                a(href="release-of-medical-info", class="link") this page
+                |  for more information.
+    br
+    br
+    br

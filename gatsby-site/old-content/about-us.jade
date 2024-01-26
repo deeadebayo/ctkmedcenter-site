@@ -1,0 +1,67 @@
+extends ./templates/layouts/layout.jade
+block script
+    - var pageTitle = "About Us";
+    meta(name="description" content="Thank you for visiting our site. Here at Christ the King Medical Center, we specialize in all your Primary Care needs. Our mission is to provide medical care to you with compassion, love, and kindness.")
+block content
+    .fluid-container.page-title-outer-box
+        .page-title-box
+            h1.page-title#fittext1
+                span.emphasize-this About
+                |  Us
+            h4.page-title-tagline Treat the whole person, not just their illness
+    br
+    br
+    br
+    br
+    .container
+        p.as-para-intro Thank you for visiting our site. Here at Christ the King Medical Center, we specialize in all your Primary Care needs. Our mission is to provide medical care to you with compassion, love, and kindness.
+        br
+        .row
+            .col-md-4
+                h3.as-heading-medium-center.text-center The Clinic
+                p.as-para Dr. George-Adebayo has successfully managed to parlay her love for having a positive impact on peoples' lives into Christ the King Medical Center. At our clinic, we treat your problems no matter how simple or complex they might be. This can range from severe chronic illnesses to simple, acute ailments.
+            .col-md-4
+                h3.as-heading-medium-center.text-center About CTKMC
+                p.as-para
+                    a(href="/contact-us", class="link-underline") Christ the King Medical Center is located in the Lakeside Commons Office Park by Meridian Park.
+                    |  Since 2009, we have been serving the city of Loganville. Our mission is the same as it was when we opened our doors: to provide quality health services that meet the needs of our community. We believe that commitment to the health of our community really makes a difference — and we show it every day.
+            .col-md-4
+                h3.as-heading-medium-center.text-center Your Health
+                p.as-para Our goal is to help you to understand wellness in addition to disease prevention and treatment. We provide vaccinations, allergy tests and treatments, cardiac ultrasounds, and plans for your weight and diet control. In a fast paced world we take the time to care. Come experience primary care with difference!
+        br
+        br
+        p.as-para-intro To learn more about us, click on either of the pictures below.
+    br
+    br
+    br
+    .container
+        .row
+            div(class="col-md-6", style={margin: "0 0 1.5em 0"})
+                a(href="/about/what-to-expect", class="link")
+                    button(type="button", class="btn btn-default btn-block clinic-shot-background about-button-hvr-glow")
+                        h1(class="as-headline-heading", style="color: #fff; text-shadow: 1px 1px #FFf;") What to Expect
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+            div(class="col-md-6", style={margin: "0 0 1.5em 0"})
+                a(href="/about/our-doctor", class="link")
+                    button(type="button", class="btn btn-default btn-block doctor-shot-background about-button-hvr-glow")
+                        h1(class="as-headline-heading", style="color: #3a494a; text-shadow: 1px 1px #3a494a;") Our Doctor
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+    br
+    br
+    br
+    br
+    br
