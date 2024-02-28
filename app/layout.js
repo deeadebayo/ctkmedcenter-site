@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 import Navbar from './components/navbar'
 import Footer from './components/footer'

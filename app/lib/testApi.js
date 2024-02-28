@@ -1,16 +1,29 @@
 import { createClient } from 'contentful'
 
 const client = createClient({
-	space: 'vp7vga6ceovq',
-	accessToken: 'qT9diGWfCEuey5pI5vzrelL70Gx33pC4YesGRZaIMno',
+	space: process.env.CONTENTFUL_SPACE_ID,
+	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 })
 
-export const getEntries = async () => {
-	console.log(`fetching entries on client`)
-	return client
-		.getEntries({
-			limit: 200,
-			order: 'sys.createdAt',
-		})
-		.catch(err => console.log(`error with getting entries: ${err}`))
+export const getAllArticles = async () => {
+	const articles = await client.getEntries({
+		limit: 200,
+		order: 'sys.createdAt',
+	})
+
+	return {
+		props: {
+			data: articles,
+		},
+	}
+}
+
+export const getOneArticle = async entryId => {
+	const article = await client.getEntry(entryId)
+
+	return {
+		props: {
+			data: article,
+		},
+	}
 }
