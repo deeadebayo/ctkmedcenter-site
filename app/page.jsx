@@ -12,15 +12,14 @@ export const metadata = {
 const Home = async () => {
 	const articles = await getAllArticles()
 
-	const testArticles = await getEntries()
+	const testArticles = await getEntries().then(entries =>
+		console.log(JSON.stringify(entries))
+	)
 
 	return (
 		<main className={styles.main}>
 			<div className={styles.description}>
-				<p>
-					Name of one article hosted on contentful is $
-					{JSON.stringify(testArticles)}
-				</p>
+				<p>body content</p>
 			</div>
 		</main>
 	)

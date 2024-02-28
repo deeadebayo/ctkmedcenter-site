@@ -7,10 +7,10 @@ const client = createClient({
 
 export const getEntries = async () => {
 	console.log(`fetching entries on client`)
-	client
+	return client
 		.getEntries({
 			limit: 200,
 			order: 'sys.createdAt',
 		})
-		.then(entries => console.log(JSON.stringify(entries)))
+		.catch(err => console.log(`error with getting entries: ${err}`))
 }
