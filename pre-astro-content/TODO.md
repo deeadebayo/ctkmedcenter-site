@@ -1,0 +1,4 @@
+- https://metatags.io/
+- https://www.gatsbyjs.com/docs/add-seo-component/
+- https://www.gatsbyjs.com/docs/add-page-metadata
+- https://kyleamathews.github.io/react-headroom/ for navbar
