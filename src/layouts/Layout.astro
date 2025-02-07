@@ -3,14 +3,51 @@ import Seo from "../components/Seo.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const pathname = Astro.url.pathname, 
-{pageTitle} = Astro.props
+import { SEO } from "astro-seo";
+
+
+interface Props {
+  pageTitle?: string,
+  description?: string;
+}
+
+const {pageTitle, description} = Astro.props
+const pathname:string = Astro.url.pathname
+
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Seo title={pageTitle}/>
+    <!-- <Seo title={pageTitle}/> -->
+    <SEO
+    titleTemplate="%s — Astro SEO"
+      title={pageTitle}
+      description={description}
+      openGraph={{
+        basic: {
+          title: 'pageTitle',
+          type: "A type.",
+          image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        }
+      }}
+      twitter={{
+        creator: "@jonasmerlins1"
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          },
+          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+          { name: "twitter:description", content: "Agent" },
+        ],
+      }}
+    />
   </head>
   <body>
     <Header pathname={pathname} />
